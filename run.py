@@ -11,7 +11,7 @@ from __future__ import division
 from __future__ import print_function
 
 #import system things
-from tensorflow.examples.tutorials.mnist import input_data # for data
+#from tensorflow.examples.tutorials.mnist import input_data # for data
 import tensorflow as tf
 import numpy as np
 import os
@@ -21,7 +21,7 @@ import inference
 import visualize
 
 # prepare data and tf.session
-mnist = input_data.read_data_sets('MNIST_data', one_hot=False)
+#mnist = input_data.read_data_sets('MNIST_data', one_hot=False)
 sess = tf.InteractiveSession()
 
 # setup siamese network
@@ -67,5 +67,5 @@ else:
     saver.restore(sess, 'model.ckpt')
 
 # visualize result
-x_test = mnist.test.images.reshape([-1, 28, 28])
+#x_test = mnist.test.images.reshape([-1, 28, 28])
 visualize.visualize(embed, x_test)

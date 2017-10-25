@@ -4,8 +4,8 @@ class siamese:
 
     # Create model
     def __init__(self):
-        self.x1 = tf.placeholder(tf.float32, [None, 784])
-        self.x2 = tf.placeholder(tf.float32, [None, 784])
+        self.x1 = tf.placeholder(tf.float32, [None, 65536]) # 256x256 images
+        self.x2 = tf.placeholder(tf.float32, [None, 65536])
 
         with tf.variable_scope("siamese") as scope:
             self.o1 = self.network(self.x1)
